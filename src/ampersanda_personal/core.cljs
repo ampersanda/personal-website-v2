@@ -1,39 +1,39 @@
 (ns ^:figwheel-hooks ampersanda-personal.core
   (:require
-   [goog.dom :as gdom]
-   [reagent.core :as reagent :refer [atom]]))
+    [ampersanda-personal.states :as state]
+    [ampersanda-personal.routes :as routes]
+    [reagent.core :as reagent]))
 
-(println "This text is printed from src/ampersanda_personal/core.cljs. Go ahead and edit it and see reloading in action.")
-
-(defn multiply [a b] (* a b))
-
-
-;; define your app data so that it doesn't get over-written on reload
-(defonce app-state (atom {:text "Hello world!"}))
-
-(defn get-app-element []
-  (gdom/getElement "app"))
-
-(defn hello-world []
+(defn home-panel []
   [:div
-   [:h1 (:text @app-state)]
-   [:h3 "Edit this in src/ampersanda_personal/core.cljs and watch it change!"]])
+   (str "Hello from " (:name @state/app-state) ". This is the Home Page.")
+   [:div [:a {:href (routes/url-for :about)} "go to About Page"]]])
+
+(defn about-panel []
+  [:div
+   "This is the About Page."
+   [:div [:a {:href (routes/url-for :home)} "go to Home Page"]]])
+
+; --------------------
+(defmulti panels identity)
+
+(defmethod panels :home-panel [] [home-panel])
+(defmethod panels :about-panel [] [about-panel])
+(defmethod panels :default [] [:div "404"])
+
+(defn main-panel []
+  (let [active-panel (:route @state/app-state)]
+    (panels active-panel)))
 
 (defn mount [el]
-  (reagent/render-component [hello-world] el))
+  (reagent/render-component [main-panel] el))
 
 (defn mount-app-element []
-  (when-let [el (get-app-element)]
+  (routes/app-routes)
+  (when-let [el (js/document.getElementById "app")]
     (mount el)))
 
-;; conditionally start your application based on the presence of an "app" element
-;; this is particularly helpful for testing this ns without launching the app
 (mount-app-element)
 
-;; specify reload hook with ^;after-load metadata
 (defn ^:after-load on-reload []
-  (mount-app-element)
-  ;; optionally touch your app-state to force rerendering depending on
-  ;; your application
-  ;; (swap! app-state update-in [:__figwheel_counter] inc)
-)
+  (mount-app-element))
