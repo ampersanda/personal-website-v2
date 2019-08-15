@@ -4,8 +4,10 @@
     [ampersanda-personal.states :as states]
     [pushy.core :as pushy]))
 
-(def routes ["/" {""      :home
-                  "about" :about}])
+(def routes ["/"
+             {""        :home
+              "blog"    :blog
+              "contact" :contact}])
 
 (defn- dispatch-route [matched-route]
   (let [panel-name (keyword (str (name (:handler matched-route)) "-panel"))]

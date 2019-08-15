@@ -2,23 +2,17 @@
   (:require
     [ampersanda-personal.states :as state]
     [ampersanda-personal.routes :as routes]
+    [ampersanda-personal.pages.home :as home]
+    [ampersanda-personal.pages.blog :as blog]
+    [ampersanda-personal.pages.contact :as contact]
     [reagent.core :as reagent]))
-
-(defn home-panel []
-  [:div
-   (str "Hello from " (:name @state/app-state) ". This is the Home Page.")
-   [:div [:a {:href (routes/url-for :about)} "go to About Page"]]])
-
-(defn about-panel []
-  [:div
-   "This is the About Page."
-   [:div [:a {:href (routes/url-for :home)} "go to Home Page"]]])
 
 ; --------------------
 (defmulti panels identity)
 
-(defmethod panels :home-panel [] [home-panel])
-(defmethod panels :about-panel [] [about-panel])
+(defmethod panels :home-panel [] [home/template])
+(defmethod panels :contact-panel [] [contact/template])
+(defmethod panels :blog-panel [] [blog/template])
 (defmethod panels :default [] [:div "404"])
 
 (defn main-panel []
