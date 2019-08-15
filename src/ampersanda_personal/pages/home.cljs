@@ -5,6 +5,7 @@
     [reagent.core :as reagent]))
 
 (defn template []
-  [:div
-   (str "Hello from " (:text @state/app-state))
-   [:div [:a {:href (routes/url-for :contact)} "go to About Page"]]])
+  [:nav
+   [:a {:href "#" :id "logo"} "Ampersanda"] ;; animate using blotter or use SVG
+   [:a {:href "#" :class "pointer-link pointer-link__bottom-left"} "Stories"]
+   [:a {:href "#" :class "pointer-link pointer-link__bottom-right"} "Contact"]])
