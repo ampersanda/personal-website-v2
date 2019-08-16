@@ -3,45 +3,56 @@
              :include-macros true]
             [quil.middleware :as m]
             [ampersanda-personal.states :as state]
-            [ampersanda-personal.subs.cursor-state :refer [expanded?]]
-            [reagent.core :refer [atom]]))
+            [ampersanda-personal.subs.cursor-state :refer [expanded?]]))
+
+(def speed 0.33)
 
 (defn- setup []
   (q/frame-rate 30)
   (q/color-mode :hsb)
   {:x      0
    :y      0
-   :cursor {:speed 0.08
+   :mouse  {:x nil
+            :y nil}
+   :cursor {:speed speed
             :amt   0
             :min   40
-            :max   100}})
+            :max   88}})
 
-(defn- update-state [{:keys [x y cursor]}]
-  {:x x
+(defn- ease-in-out-cubic [speed]
+  (if (< speed 0.5)
+    (* 4 speed speed speed)
+    (inc (* (dec speed) (- (* 2 speed) 2) (- (* 2 speed) 2)))))
 
-   :y y
+(defn- update-state [{:keys [x y cursor mouse]}]
+  {:x          (+ x (* (- (:x mouse) x) speed))
+
+   :y          (+ y (* (- (:y mouse) y) speed))
+
+   :mouse      mouse
 
    :cursor
-   (let [{:keys [amt min max speed]} cursor
-         ease-out-quad (* speed (- 2 speed))]
+   (let [{:keys [amt min max speed]} cursor]
      (cond
-       (and (expanded?) (< amt 1))    (update cursor :amt #(+ % ease-out-quad))
-       (and (not (expanded?)) (> amt 0))              (update cursor :amt #(- % ease-out-quad))
-       :else                          cursor))})
+       (and (expanded?) (< amt 1))                    (update cursor :amt #(+ % (ease-in-out-cubic speed)))
+       (and (not (expanded?)) (> amt 0))              (update cursor :amt #(- % (ease-in-out-cubic speed)))
+       :else                                          cursor))})
 
 (defn- draw-state [{:keys [cursor x y]}]
   (q/background 255)
   (q/stroke 150)
 
-  (let [{:keys [min max amt speed]} cursor]
-    (js/console.log amt)
+  (let [{:keys [min max amt]} cursor]
+    (if (expanded?)
+      (q/stroke-weight (q/lerp 1 2 amt))
+      (q/stroke-weight 1))
+
     (q/ellipse x y (q/lerp min max amt) (q/lerp min max amt))))
 
-;; FIXME : need easing
-(defn- mouse-moved [{:keys [cursor]} {:keys [x y]}]
-  {:x      x
-   :y      y
-   :cursor cursor})
+(defn- mouse-moved [state event]
+  (assoc state :mouse
+         {:x (:x event)
+          :y (:y event)}))
 
 (defn execute! [width height]
   (q/defsketch cursor

@@ -246,6 +246,14 @@ body {
 .no-cursor {
   cursor: none;
 }
+#logo {
+  text-decoration: none;
+  font-weight: 600;
+  color: #222;
+  font-size: 32px;
+  display: inline-block;
+  margin: 32px;
+}
 .pointer-link {
   position: absolute;
   color: #222;
