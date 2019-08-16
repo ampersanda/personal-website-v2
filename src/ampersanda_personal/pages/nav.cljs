@@ -17,7 +17,7 @@
       [:div
        [:nav
         [:a
-         {:href (routes/url-for :home) :id "logo" :class "no-cursor pointer-link"}
+         {:href (routes/url-for :home) :id "logo" :class "no-cursor pointer-link editor"}
          [:span {:class "alias alias__1"} "M"]
          [:span {:class "alias"} "o"]
          [:span {:class "alias"} "c"]

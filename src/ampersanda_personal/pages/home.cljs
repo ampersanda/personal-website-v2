@@ -8,7 +8,6 @@
 
 (defn template []
  [:main
-  {:class "content"}
-  [:h1 {:class "jumbo"} "Hello!"]
-  [:h1 "My name is Mochamad Lucky Pradana. I am Front End Developer and (ocassionally) Flutter Developer who live in Surabaya, Indonesia.
-  "]])
+  {:class "content editor"}
+  [:h1 {:class "jumbo use-global-slant"} "Hello!"]
+  [:h1 "My name is " [:span {:style {:color "var(--blue)"}} "Mochamad Lucky Pradana"] ". I am Front End Developer and (ocassionally) Flutter Developer who live in " [:a {:href "https://goo.gl/maps/sJumGDqZ8KVz16nG7"} "Surabaya, Indonesia"] "."]])

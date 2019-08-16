@@ -19,10 +19,7 @@
 (defmethod panels :default [] [:h1 {:class "jumbo"} "404"])
 
 (defn main-panel []
-  (let [active-panel (:route @state/app-state)]
-    [:div
-     [nav/template]
-     (panels active-panel)]))
+  (panels (:route @state/app-state)))
 
 (defn mount [el]
   (reagent/render-component [main-panel] el))

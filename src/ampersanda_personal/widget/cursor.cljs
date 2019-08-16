@@ -25,6 +25,8 @@
     (inc (* (dec speed) (- (* 2 speed) 2) (- (* 2 speed) 2)))))
 
 (defn- update-state [{:keys [x y cursor mouse]}]
+  (.setProperty js/document.documentElement.style "--global-slant" (* -10 (/ (+ x (* (- (:x mouse) x) speed)) js/window.innerWidth)))
+
   {:x          (+ x (* (- (:x mouse) x) speed))
 
    :y          (+ y (* (- (:y mouse) y) speed))
