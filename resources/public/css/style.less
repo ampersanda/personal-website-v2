@@ -1,8 +1,13 @@
 @import 'modern-normalize';
 @import 'fonts';
 
+html, body {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  //background: #c3f7eb;
 }
 
 #app {
@@ -10,6 +15,19 @@ body {
   margin: 0 auto;
   position: relative;
   min-height: 100vh;
+}
+
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.no-cursor {
+  cursor: none;
 }
 
 @import 'nav';

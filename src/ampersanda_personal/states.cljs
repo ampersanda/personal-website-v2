@@ -2,4 +2,13 @@
   (:require [reagent.core :as reagent
              :refer           [atom]]))
 
-(defonce app-state (atom {:text "Halo semua!"}))
+;; CURSOR STATE
+;; :normal
+;; :expand
+;; :arrow-right
+;; :arrow-left
+
+(defonce app-state
+  (atom
+   {:text         "Halo semua!"
+    :cursor-state :normal}))

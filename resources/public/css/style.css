@@ -222,6 +222,10 @@ summary {
   src: url('../font/Inter.var.ttf') format('truetype-variations');
   font-weight: 100 900;
 }
+html,
+body {
+  font-size: 16px;
+}
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -231,18 +235,32 @@ body {
   position: relative;
   min-height: 100vh;
 }
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.no-cursor {
+  cursor: none;
+}
 .pointer-link {
   position: absolute;
   color: #222;
   font-weight: 600;
   text-decoration: none;
+  cursor: none;
+  display: inline-block;
+  padding: 32px;
 }
 .pointer-link.pointer-link__bottom-left {
-  bottom: 32px;
+  bottom: 0;
   left: 0;
 }
 .pointer-link.pointer-link__bottom-right {
-  bottom: 32px;
+  bottom: 0;
   right: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9868bed2-6029-4f82-8ce2-c11333639530" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/public/css/fonts.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/public/css/modern-normalize.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/public/css/nav.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/public/css/pointer-link.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/public/css/style.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/public/font/Inter.var.ttf" afterDir="false" />
+    <list default="true" id="9868bed2-6029-4f82-8ce2-c11333639530" name="Default Changelist" comment="add raw pointer link">
+      <change afterPath="$PROJECT_DIR$/src/ampersanda_personal/events.cljs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ampersanda_personal/subs/cursor_state.cljs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ampersanda_personal/widget/pointer-link.cljs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps.edn" beforeDir="false" afterPath="$PROJECT_DIR$/deps.edn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/css/pointer-link.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/pointer-link.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/css/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/core.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/core.cljs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/states.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/states.cljs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,13 +28,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs">
+        <entry file="file://$PROJECT_DIR$/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
-              <folding>
-                <element signature="e#0#183#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="264">
+              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -51,20 +51,27 @@
         <option value="$PROJECT_DIR$/src/ampersanda_personal/clj/server.clj" />
         <option value="$PROJECT_DIR$/src/clj/server.clj" />
         <option value="$PROJECT_DIR$/figwheel-main.edn" />
-        <option value="$PROJECT_DIR$/deps.edn" />
-        <option value="$PROJECT_DIR$/src/ampersanda_personal/states.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/contact.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/blog.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/app_server.clj" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/routes.cljs" />
         <option value="$PROJECT_DIR$/resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/public/css/modern-normalize.less" />
-        <option value="$PROJECT_DIR$/src/ampersanda_personal/core.cljs" />
         <option value="$PROJECT_DIR$/resources/public/css/fonts.less" />
         <option value="$PROJECT_DIR$/resources/public/css/nav.less" />
+        <option value="$PROJECT_DIR$/deps.edn" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/utils/debounce.cljs" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/states.cljs" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/core.cljs" />
         <option value="$PROJECT_DIR$/resources/public/css/style.less" />
-        <option value="$PROJECT_DIR$/resources/public/css/pointer-link.less" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/subs.cljs" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/events.cljs" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/widget/pointer-link.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs" />
+        <option value="$PROJECT_DIR$/resources/public/css/pointer-link.less" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/subs/cursor_state.cljs" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs" />
+        <option value="$PROJECT_DIR$/resources/public/index.html" />
       </list>
     </option>
   </component>
@@ -118,6 +125,13 @@
             <path>
               <item name="ampersanda-personal.core" type="b2602c69:ProjectViewProjectNode" />
               <item name="ampersanda-personal.core" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="font" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ampersanda-personal.core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ampersanda-personal.core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -132,6 +146,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ampersanda_personal" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ampersanda-personal.core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ampersanda-personal.core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ampersanda_personal" type="462c0819:PsiDirectoryNode" />
+              <item name="subs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ampersanda-personal.core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ampersanda-personal.core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ampersanda_personal" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ampersanda-personal.core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ampersanda-personal.core" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ampersanda-personal.core" type="b2602c69:ProjectViewProjectNode" />
@@ -195,7 +228,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565886338973</updated>
       <workItem from="1565886340215" duration="4633000" />
-      <workItem from="1565891578407" duration="4921000" />
+      <workItem from="1565891578407" duration="16753000" />
     </task>
     <task id="LOCAL-00001" summary="setup route">
       <created>1565895125222</created>
@@ -211,22 +244,30 @@
       <option name="project" value="LOCAL" />
       <updated>1565895885392</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="setup pointer link">
+      <created>1565897063850</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565897063850</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9554000" />
+    <option name="totallyTimeSpent" value="21386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="56" width="1793" height="938" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15448968" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15448968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32995495" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32995495" />
@@ -258,7 +299,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setup route" />
     <MESSAGE value="scaffold route" />
-    <option name="LAST_COMMIT_MESSAGE" value="scaffold route" />
+    <MESSAGE value="setup pointer link" />
+    <MESSAGE value="add raw pointer link" />
+    <option name="LAST_COMMIT_MESSAGE" value="add raw pointer link" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/state.cljs" />
@@ -313,13 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deps.edn">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="75" lean-forward="true" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/figwheel-main.edn">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -350,53 +386,6 @@
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/about.cljs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/states.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/app_server.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/routes.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/contact.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#186#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/blog.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/css/style.css.map">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="sourcemapFileViewerProvider" />
@@ -405,16 +394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/core.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#321#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,27 +414,150 @@
     <entry file="file://$PROJECT_DIR$/resources/public/css/nav.less">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/deps.edn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/contact.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/routes.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/utils/debounce.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/blog.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/subs.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/app_server.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="726">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/css/pointer-link.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="176">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+        <state relative-caret-position="396">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
-            <element signature="e#0#183#0" expanded="true" />
+            <element signature="e#0#293#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/events.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/core.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/states.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/subs/cursor_state.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/widget/pointer-link.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>

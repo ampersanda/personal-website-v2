@@ -5,6 +5,7 @@
     [ampersanda-personal.pages.home :as home]
     [ampersanda-personal.pages.blog :as blog]
     [ampersanda-personal.pages.contact :as contact]
+    [ampersanda-personal.widget.cursor :as cursor-widget]
     [reagent.core :as reagent]))
 
 ; --------------------
@@ -24,6 +25,7 @@
 
 (defn mount-app-element []
   (routes/app-routes)
+  (cursor-widget/execute! js/window.innerWidth js/window.innerHeight)
   (when-let [el (js/document.getElementById "app")]
     (mount el)))
 

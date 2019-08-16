@@ -3,6 +3,7 @@
            bidi                      {:mvn/version "2.1.6"}
            kibu/pushy                {:mvn/version "0.3.2"}
            compojure                 {:mvn/version "1.6.1"}
+           quil                      {:mvn/version "3.0.0"}
            reagent                   {:mvn/version "0.8.1"}}
  :paths   ["src" "resources"]
  :aliases {:fig   {:extra-deps
