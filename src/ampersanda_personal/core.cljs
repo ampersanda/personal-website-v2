@@ -5,6 +5,7 @@
     [ampersanda-personal.pages.home :as home]
     [ampersanda-personal.pages.blog :as blog]
     [ampersanda-personal.pages.nav :as nav]
+    [ampersanda-personal.utils.shim :as shim]
     [ampersanda-personal.pages.footer :as footer]
     [ampersanda-personal.pages.contact :as contact]
     [ampersanda-personal.widget.cursor :as cursor-widget]
@@ -19,7 +20,18 @@
 (defmethod panels :default [] [:h1 {:class "jumbo"} "404"])
 
 (defn main-panel []
-  (panels (:route @state/app-state)))
+  (reagent/create-class
+   {:component-did-mount
+    (fn [_]
+      ;; shim page scroll
+      (shim/shim-scroll))
+
+    :component-will-unmount
+    (fn []
+      (shim/reset-scroll))
+    :reagent-render
+    (fn []
+      (panels (:route @state/app-state)))}))
 
 (defn mount [el]
   (reagent/render-component [main-panel] el))
