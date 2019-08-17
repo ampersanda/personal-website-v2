@@ -13,11 +13,11 @@
   [:h1 "My name is " [:span {:style {:color "var(--blue)"}} "Mochamad Lucky Pradana"] ". I am Front End Developer and (ocassionally) Flutter Developer who live in " [:a {:href "https://goo.gl/maps/sJumGDqZ8KVz16nG7"} "Surabaya, Indonesia"] "."]
 
   [:div {:class "grid-menu normal-cursor"}
-   [:div {:class "grid-menu--item" :style {:background :blue}}
-    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "Stories"]]]
-   [:div {:class "grid-menu--item" :style {:background :red}}
-    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "Projects"]]]
-   [:div {:class "grid-menu--item grid-menu--item__small grid-menu--item__square" :style {:background :green}}
-    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "About"]]]
-   [:div {:class "grid-menu--item grid-menu--item__small grid-menu--item__square" :style {:background :purple}}
-    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "Stories"]]]]])
+   [:div {:class "grid-menu--item" :style {:background "var(--blue)"}}
+    [:h1 {:class "grid-menu--title"} [:a {:href "#" :class "use-global-slant"} "Stories"]]]
+   [:div {:class "grid-menu--item" :style {:background :coral}}
+    [:h1 {:class "grid-menu--title"} [:a {:href "#" :class "use-global-slant"} "Projects"]]]
+   [:div {:class "grid-menu--item grid-menu--item__small grid-menu--item__square" :style {:background "#ed4d8b"}}
+    [:h1 {:class "grid-menu--title"} [:a {:href "#" :class "use-global-slant"} "About"]]]
+   [:div {:class "grid-menu--item grid-menu--item__small grid-menu--item__square" :style {:background "#ebedf9"}}
+    [:h1 {:class "grid-menu--title"} [:a {:href "#" :class "use-global-slant"} "Stories"]]]]])

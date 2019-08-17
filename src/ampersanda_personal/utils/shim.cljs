@@ -33,6 +33,7 @@
 
 (defn- make-dummy-div [wrapper]
   (let [div (js/document.createElement "div")]
+    (. div setAttribute "id" "scrollbar")
     (swap! scroll-attrs assoc :div div)
     (update-div-height)
     (js/document.body.appendChild div)))
@@ -65,6 +66,10 @@
            :scroll-top 0
            :tweened    0
            :win-height 0})
+
+  (when-let [scrollbar (js/document.getElementById "scrollbar")]
+    (. (.-parentNode scrollbar) removeChild scrollbar))
+
   (js/window.removeEventListener "scroll" on-scroll))
 
 (defn shim-scroll []
