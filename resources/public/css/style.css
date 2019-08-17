@@ -234,7 +234,7 @@ body {
 }
 #app {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 114px);
 }
 #app,
 footer {
@@ -281,7 +281,7 @@ footer {
 }
 main.content {
   padding: 8vh 32px 88px;
-  min-height: 100vh;
+  min-height: calc(100vh - 114px);
 }
 .grid-menu {
   --grid-menu: 320px;

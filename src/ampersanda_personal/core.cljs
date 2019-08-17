@@ -20,18 +20,7 @@
 (defmethod panels :default [] [:h1 {:class "jumbo"} "404"])
 
 (defn main-panel []
-  (reagent/create-class
-   {:component-did-mount
-    (fn [_]
-      ;; shim page scroll
-      (shim/shim-scroll))
-
-    :component-will-unmount
-    (fn []
-      (shim/reset-scroll))
-    :reagent-render
-    (fn []
-      (panels (:route @state/app-state)))}))
+  (panels (:route @state/app-state)))
 
 (defn mount [el]
   (reagent/render-component [main-panel] el))
