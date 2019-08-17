@@ -1,5 +1,7 @@
 (ns ^:figwheel-hooks ampersanda-personal.utils.shim
-  (:require [goog.object :as g]))
+  (:require [goog.object :as g]
+            [reagent.core :as reagent]
+            [ampersanda-personal.routes :as routes]))
 
 (def vendors [:ms :moz :webkit :o])
 
@@ -90,6 +92,21 @@
     (update-scroll)
 
     (js/window.addEventListener "resize" on-resize)))
+
+(defn render-with-shim [content]
+  (reagent/create-class
+   {:component-did-mount
+    (fn [_]
+      ;; shim page scroll
+      (shim-scroll))
+
+    :component-will-unmount
+    (fn []
+      (reset-scroll))
+
+    :reagent-render
+    (fn [_]
+      content)}))
 
 ;(defn raf-fallback []
 ;  (let [i         (atom 0)

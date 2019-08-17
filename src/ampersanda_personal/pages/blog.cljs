@@ -2,21 +2,10 @@
   (:require
     [ampersanda-personal.states :as state]
     [ampersanda-personal.routes :as routes]
-    [ampersanda-personal.utils.shim :refer [shim-scroll reset-scroll]]
-    [reagent.core :as reagent]))
+    [reagent.core :as reagent]
+    [ampersanda-personal.utils.shim :refer [render-with-shim]]))
 
 (defn template []
-  (reagent/create-class
-   {:component-did-mount
-    (fn [_]
-      ;; shim page scroll
-      (shim-scroll))
-
-    :component-will-unmount
-    (fn []
-      (reset-scroll))
-
-    :reagent-render
-    (fn []
-      [:div
-       [:div [:a {:href (routes/url-for :home)} "HOme"]]])}))
+  (render-with-shim
+   [:div
+    [:div [:a {:href (routes/url-for :home)} "HOme"]]]))

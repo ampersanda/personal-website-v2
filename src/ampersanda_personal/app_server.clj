@@ -2,7 +2,7 @@
   (:require
     [ring.util.response :refer [resource-response content-type not-found]]))
 
-(def route-set #{"/" "/contact" "/blog" "/home"})
+(def route-set #{"/" "/contact" "/blog" "/home" "/about" "/projects"})
 
 (defn handler [req]
   (or
