@@ -14,10 +14,10 @@
 
   [:div {:class "grid-menu normal-cursor"}
    [:div {:class "grid-menu--item" :style {:background :blue}}
-    [:a {:href "#"} "Stories"]]
+    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "Stories"]]]
    [:div {:class "grid-menu--item" :style {:background :red}}
-    "Sub Sites"]
+    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "Projects"]]]
    [:div {:class "grid-menu--item grid-menu--item__small grid-menu--item__square" :style {:background :green}}
-    "About"]
+    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "About"]]]
    [:div {:class "grid-menu--item grid-menu--item__small grid-menu--item__square" :style {:background :purple}}
-    "Contact"]]])
+    [:h1 {:class "grid-menu--title"} [:a {:href "#"} "Stories"]]]]])

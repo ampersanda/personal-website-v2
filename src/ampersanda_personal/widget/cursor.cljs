@@ -25,20 +25,20 @@
     (inc (* (dec speed) (- (* 2 speed) 2) (- (* 2 speed) 2)))))
 
 (defn- update-state [{:keys [x y cursor mouse]}]
-  (.setProperty js/document.documentElement.style "--global-slant" (* -10 (/ (+ x (* (- (:x mouse) x) speed)) js/window.innerWidth)))
+  (let [x-acc (+ x (* (- (:x mouse) x) speed))
+        y-acc (+ y (* (- (:y mouse) y) speed))]
+    (.setProperty js/document.documentElement.style "--global-slant" (* -10 (/ x-acc js/window.innerWidth)))
 
-  {:x          (+ x (* (- (:x mouse) x) speed))
+    {:x     x-acc
+     :y     y-acc
+     :mouse mouse
 
-   :y          (+ y (* (- (:y mouse) y) speed))
-
-   :mouse      mouse
-
-   :cursor
-   (let [{:keys [amt min max speed]} cursor]
-     (cond
-       (and (expanded?) (< amt 1))                    (update cursor :amt #(+ % (ease-in-out-cubic speed)))
-       (and (not (expanded?)) (> amt 0))              (update cursor :amt #(- % (ease-in-out-cubic speed)))
-       :else                                          cursor))})
+     :cursor
+     (let [{:keys [amt min max speed]} cursor]
+       (cond
+         (and (expanded?) (< amt 1))                    (update cursor :amt #(+ % (ease-in-out-cubic speed)))
+         (and (not (expanded?)) (> amt 0))              (update cursor :amt #(- % (ease-in-out-cubic speed)))
+         :else                                          cursor))}))
 
 (defn- draw-state [{:keys [cursor x y]}]
   (q/background 255)
