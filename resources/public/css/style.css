@@ -252,6 +252,9 @@ footer {
 .no-cursor {
   cursor: none;
 }
+.normal-cursor {
+  cursor: auto;
+}
 #logo {
   text-decoration: none;
   font-weight: 600;
@@ -280,6 +283,21 @@ main.content {
   padding: 8vh 32px 88px;
   min-height: 100vh;
 }
+.grid-menu {
+  --grid-menu: 320px;
+  margin-top: 88px;
+  display: grid;
+  grid-template-columns: 1fr 1fr var(--grid-menu);
+}
+.grid-menu--item {
+  grid-row: 1 / 3;
+}
+.grid-menu--item__small {
+  grid-row: initial;
+}
+.grid-menu--item__square {
+  height: var(--grid-menu);
+}
 .jumbo {
   font-size: 5em;
 }
@@ -290,7 +308,6 @@ h3,
 h4,
 h5,
 h6 {
-  cursor: auto;
   line-height: 1.2em;
   letter-spacing: -1px;
 }
