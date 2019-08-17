@@ -71,6 +71,9 @@
            :tweened    0
            :win-height 0})
 
+  (set! (.. (js/document.getElementById "cursor") -style -transform)
+    (str "translateY(" 0 "px)"))
+
   (when-let [scrollbar (js/document.getElementById "scrollbar")]
     (. (.-parentNode scrollbar) removeChild scrollbar))
 
