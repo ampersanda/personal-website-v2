@@ -13,7 +13,7 @@
     :tweened    0
     :win-height 0}))
 
-(defn- resize! []
+(defn- resize-fallback []
   (if (nil? (.-createEvent js/document))
     (js/window.dispatchEvent (new Event. "resize"))
     (let [resize-event (js/window.document.createEvent "UIEvents")]
@@ -59,6 +59,10 @@
                       (or (.. js/document -documentElement -scrollTop)
                           (.-pageYOffset js/window) 0))))
 
+(defn on-resize []
+  (update-scroll)
+  (update-div-height))
+
 (defn reset-scroll []
   (reset! scroll-attrs
           {:wrapper    nil
@@ -70,6 +74,7 @@
   (when-let [scrollbar (js/document.getElementById "scrollbar")]
     (. (.-parentNode scrollbar) removeChild scrollbar))
 
+  (js/window.removeEventListener "resize" on-resize)
   (js/window.removeEventListener "scroll" on-scroll))
 
 (defn shim-scroll []
@@ -79,7 +84,9 @@
     (make-dummy-div wrapper)
 
     (js/window.addEventListener "scroll" on-scroll)
-    (update-scroll)))
+    (update-scroll)
+
+    (js/window.addEventListener "resize" on-resize)))
 
 ;(defn raf-fallback []
 ;  (let [i         (atom 0)
