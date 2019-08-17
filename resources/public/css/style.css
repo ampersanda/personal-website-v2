@@ -287,13 +287,14 @@ main.content {
   --grid-menu: 320px;
   margin-top: 88px;
   display: grid;
-  grid-template-columns: 1fr 1fr var(--grid-menu);
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .grid-menu--title {
   font-size: 3em;
   position: absolute;
   width: 100%;
-  margin: 32px;
+  padding: 32px;
+  margin: 0;
   bottom: 0;
 }
 .grid-menu--item {

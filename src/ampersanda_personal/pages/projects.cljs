@@ -1,32 +1,27 @@
-(ns ^:figwheel-hooks ampersanda-personal.pages.home
+(ns ^:figwheel-hooks ampersanda-personal.pages.projects
   (:require
-    [ampersanda-personal.events :as ev]
-    [ampersanda-personal.routes :as routes]
     [ampersanda-personal.states :as state]
-    [ampersanda-personal.utils.shim :refer [render-with-shim]]
-    [ampersanda-personal.widget.pointer-link :refer [+pointer-event]]
-    [reagent.core :as reagent]))
+    [ampersanda-personal.routes :as routes]
+    [reagent.core :as reagent]
+    [ampersanda-personal.utils.shim :refer [render-with-shim]]))
 
 (defn template []
   (render-with-shim
    [:main
     {:class "content editor"}
-    [:h1 {:class "jumbo use-global-slant"} "Hello!"]
-    [:h1
-     "My name is "
-     [:span {:style {:color "var(--blue)"}} "Mochamad Lucky Pradana"]
-     ". I am Front End Developer and (ocassionally) Flutter Developer who live in "
-     [:a
-      (+pointer-event {:href "https://goo.gl/maps/sJumGDqZ8KVz16nG7"})
-      "Surabaya, Indonesia"]
-     "."]
+    [:h1 {:class "jumbo use-global-slant"} "Projects"]
 
     [:div
      {:class "grid-menu normal-cursor"}
      [:a
       {:class "grid-menu--item"
-       :style {:background "var(--blue)" :href (routes/url-for :blog)}}
-      [:h1 {:class "grid-menu--title"} "Stories"]]
+       :style {:background            "#888 url('images/lifestone-phone.jpg')"
+               :background-blend-mode :multiply
+               :background-position   "bottom right"
+               :background-repeat     "no-repeat"
+               :background-size       :cover}
+       :href  (routes/url-for :blog)}
+      [:h1 {:class "grid-menu--title" :style {:color :white}} "Lifestone Indonesia"]]
      [:a
       {:class "grid-menu--item"
        :style {:background :coral}

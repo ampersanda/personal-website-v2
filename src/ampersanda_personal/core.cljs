@@ -8,6 +8,7 @@
     [ampersanda-personal.utils.shim :as shim]
     [ampersanda-personal.pages.footer :as footer]
     [ampersanda-personal.pages.contact :as contact]
+    [ampersanda-personal.pages.projects :as projects]
     [ampersanda-personal.widget.cursor :as cursor-widget]
     [reagent.core :as reagent]))
 
@@ -17,7 +18,7 @@
 (defmethod panels :home-panel [] [home/template])
 (defmethod panels :contact-panel [] [contact/template])
 (defmethod panels :blog-panel [] [blog/template])
-(defmethod panels :projects-panel [] [:h1 {:class "jumbo"} "Projects"])
+(defmethod panels :projects-panel [] [projects/template])
 (defmethod panels :about-panel [] [:h1 {:class "jumbo"} "About"])
 (defmethod panels :default [] [:h1 {:class "jumbo"} "404"])
 
