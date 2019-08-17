@@ -5,9 +5,11 @@
     [pushy.core :as pushy]))
 
 (def routes ["/"
-             {""        :home
-              "blog"    :blog
-              "contact" :contact}])
+             {""         :home
+              "blog"     :blog
+              "projects" :projects
+              "about"    :about
+              "contact"  :contact}])
 
 (defn- dispatch-route [matched-route]
   (let [panel-name (keyword (str (name (:handler matched-route)) "-panel"))]

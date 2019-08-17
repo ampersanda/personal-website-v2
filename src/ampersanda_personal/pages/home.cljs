@@ -34,20 +34,20 @@
         {:class "grid-menu normal-cursor"}
         [:a
          {:class "grid-menu--item use-global-slant"
-          :style {:background "var(--blue)" :href "#"}}
+          :style {:background "var(--blue)" :href (routes/url-for :blog)}}
          [:h1 {:class "grid-menu--title"} "Stories"]]
         [:a
          {:class "grid-menu--item use-global-slant"
           :style {:background :coral}
-          :href  "#"}
+          :href  (routes/url-for :projects)}
          [:h1 {:class "grid-menu--title"} "Projects"]]
         [:a
          {:class "grid-menu--item grid-menu--item__small grid-menu--item__square use-global-slant"
           :style {:background "#ed4d8b"}
-          :href  "#"}
+          :href  (routes/url-for :about)}
          [:h1 {:class "grid-menu--title"} "About"]]
         [:a
          {:class "grid-menu--item grid-menu--item__small grid-menu--item__square use-global-slant"
           :style {:background "#ebedf9"}
-          :href  "#"}
-         [:h1 {:class "grid-menu--title"} "Stories"]]]])}))
+          :href  (routes/url-for :contact)}
+         [:h1 {:class "grid-menu--title"} "Contact"]]]])}))

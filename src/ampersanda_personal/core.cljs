@@ -17,6 +17,8 @@
 (defmethod panels :home-panel [] [home/template])
 (defmethod panels :contact-panel [] [contact/template])
 (defmethod panels :blog-panel [] [blog/template])
+(defmethod panels :projects-panel [] [:h1 {:class "jumbo"} "Projects"])
+(defmethod panels :about-panel [] [:h1 {:class "jumbo"} "About"])
 (defmethod panels :default [] [:h1 {:class "jumbo"} "404"])
 
 (defn main-panel []

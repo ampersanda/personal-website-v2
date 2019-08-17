@@ -19,5 +19,4 @@
     :reagent-render
     (fn []
       [:div
-       (str "Hello from " (:text @state/app-state))
-       [:div [:a {:href (routes/url-for :about)} "go to About Page"]]])}))
+       [:div [:a {:href (routes/url-for :home)} "HOme"]]])}))
