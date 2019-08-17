@@ -59,6 +59,12 @@
                           (.-pageYOffset js/window) 0))))
 
 (defn reset-scroll []
+  (reset! scroll-attrs
+          {:wrapper    nil
+           :div        nil
+           :scroll-top 0
+           :tweened    0
+           :win-height 0})
   (js/window.removeEventListener "scroll" on-scroll))
 
 (defn shim-scroll []
