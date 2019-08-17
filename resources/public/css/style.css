@@ -296,13 +296,11 @@ main.content {
   margin: 32px;
   bottom: 0;
 }
-.grid-menu--title a {
-  text-decoration: none;
-  color: #222 !important;
-}
 .grid-menu--item {
   grid-row: 1 / 3;
   position: relative;
+  text-decoration: none;
+  color: #222 !important;
 }
 .grid-menu--item__small {
   grid-row: initial;
