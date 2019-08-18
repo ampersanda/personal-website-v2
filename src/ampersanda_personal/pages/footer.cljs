@@ -19,15 +19,15 @@
     [:p
      "Created using "
      [:a
-      (+pointer-event {:href "https://clojurescript.org"})
+      (+pointer-event {:href "https://clojurescript.org" :target "_blank"})
       "Clojurescript"]
      " + "
      [:a
-      (+pointer-event {:href "https://reagent-project.github.io"})
+      (+pointer-event {:href "https://reagent-project.github.io" :target "_blank"})
       "Reagent"]
      " + "
      [:a
-      (+pointer-event {:href "http://quil.info"})
+      (+pointer-event {:href "http://quil.info" :target "_blank"})
       "Quil"]
      " +️"
      [:span {:style {:color :red}} "❤️"]]]
