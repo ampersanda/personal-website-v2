@@ -11,8 +11,16 @@
               "about"    :about
               "contact"  :contact}])
 
+(def routes-meta
+  {:home     "Mochamad Lucky Pradana"
+   :blog     "Stories - Mochamad Lucky Pradana"
+   :projects "Projects - Mochamad Lucky Pradana"
+   :about    "About Me - Mochamad Lucky Pradana"
+   :contact  "Contact - Mochamad Lucky Pradana"})
+
 (defn- dispatch-route [matched-route]
   (let [panel-name (keyword (str (name (:handler matched-route)) "-panel"))]
+    (set! js/document.title ((:handler matched-route) routes-meta))
     (swap! states/app-state assoc :route panel-name)))
 
 (defn- parse-url [url]
