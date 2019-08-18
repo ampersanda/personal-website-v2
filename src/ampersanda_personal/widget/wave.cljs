@@ -50,7 +50,7 @@
   {:pre [(and (string? host)
               (number? width)
               (number? height))]}
-  (q/defsketch cursor
+  (q/defsketch wave
     :host host
     :size [width height]
     :setup setup
