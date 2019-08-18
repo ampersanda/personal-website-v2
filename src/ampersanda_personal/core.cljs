@@ -29,7 +29,8 @@
     (reagent/create-class
      {:component-did-mount
       (fn [_]
-        (js/window.addEventListener "resize" resizer))
+        (js/window.addEventListener "resize" resizer)
+        (resizer))
 
       :component-will-unmount
       (fn []
@@ -37,8 +38,7 @@
 
       :reagent-render
       (fn []
-        (panels (:route @state/app-state))
-        (resizer))})))
+        (panels (:route @state/app-state)))})))
 
 (defn mount [el]
   (reagent/render-component [main-panel] el))
