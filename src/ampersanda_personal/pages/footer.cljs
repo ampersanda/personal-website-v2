@@ -7,14 +7,30 @@
     [reagent.core :as reagent]))
 
 (defn template []
-  [:div {:class "wrapper"}
+  [:div
+   {:class "wrapper"}
    [:a
     (+pointer-event
-     {:href  (routes/url-for :blog)
+     {:href  (routes/url-for :home)
       :class "pointer-link pointer-link__bottom-left"})
-    "Stories"]
-   [:p "Created using Clojurescript + Reagent + Quil +️"
-    [:span {:style {:color :red}} "❤️"]]
+    "Home"]
+   [:div
+    {:class "editor text"}
+    [:p
+     "Created using "
+     [:a
+      (+pointer-event {:href "https://clojurescript.org"})
+      "Clojurescript"]
+     " + "
+     [:a
+      (+pointer-event {:href "https://reagent-project.github.io"})
+      "Reagent"]
+     " + "
+     [:a
+      (+pointer-event {:href "http://quil.info"})
+      "Quil"]
+     " +️"
+     [:span {:style {:color :red}} "❤️"]]]
    [:a
     (+pointer-event
      {:href  (routes/url-for :contact)

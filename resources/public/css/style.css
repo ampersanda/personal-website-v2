@@ -349,7 +349,7 @@ footer .wrapper {
   display: flex;
   align-items: center;
 }
-footer p {
+footer .text {
   margin: 0;
   flex: 1;
 }

@@ -2,11 +2,11 @@
   (:require
     [ampersanda-personal.states :as state]
     [ampersanda-personal.routes :as routes]
-    [ampersanda-personal.utils.shim :refer [render-with-shim]]
-    [reagent.core :as reagent]))
+    [reagent.core :as reagent]
+    [ampersanda-personal.utils.shim :refer [render-with-shim]]))
 
 (defn template []
   (render-with-shim
-   [:div
-    (str "Hello from " (:text @state/app-state))
-    [:div [:a {:href (routes/url-for :about)} "go to About Page"]]]))
+   [:main
+    {:class "content editor"}
+    [:h1 {:class "jumbo use-global-slant"} "Contact"]]))
