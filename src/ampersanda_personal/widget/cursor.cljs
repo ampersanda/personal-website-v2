@@ -4,7 +4,6 @@
             [quil.middleware :as m]
             [reagent.core :refer [atom]]
             [ampersanda-personal.states :as state]
-            [ampersanda-personal.subs.window-state :refer [window]]
             [ampersanda-personal.subs.cursor-state :refer [expanded?]]))
 
 (def speed 0.33)

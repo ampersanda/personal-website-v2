@@ -3,7 +3,6 @@
              :include-macros true]
             [quil.middleware :as m]
             [ampersanda-personal.states :as state]
-            [ampersanda-personal.subs.window-state :refer [window]]
             [ampersanda-personal.subs.cursor-state :refer [expanded?]]))
 
 
