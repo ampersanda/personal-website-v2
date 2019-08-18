@@ -16,7 +16,9 @@
    :y      0
    :mouse  {:x nil
             :y nil}
-   :cursor {:rotation 0
+   :cursor {:dot      1
+            :rotation 0
+            :count    120
             :speed    speed
             :amt      0
             :min      40
@@ -38,30 +40,35 @@
      :mouse mouse
 
      :cursor
-     (let [{:keys [amt speed]} cursor]
-
-       (cond
-         (and (expanded?) (< amt 1))                    (update cursor :amt #(+ % (ease-in-out-cubic speed)))
-         (and (not (expanded?)) (> amt 0))              (update cursor :amt #(- % (ease-in-out-cubic speed)))
-         (expanded?)                                    (update cursor :rotation #(+ % (ease-in-out-cubic speed)))
-         :else                                          cursor))}))
+     (let [{:keys [amt speed]} cursor
+           count-min           48
+           count-max           120
+           count-step          8]
+       (if (expanded?)
+         (-> cursor
+             (update :amt #(if (< amt 1) (+ % (ease-in-out-cubic speed)) %))
+             (update :rotation #(+ % (ease-in-out-cubic speed)))
+             (update :dot #(if (< % 4) (inc %) %))
+             (update :count #(if (> % count-min) (- % count-step) %)))
+         (-> cursor
+             (update :amt #(if (> amt 0) (- % (ease-in-out-cubic speed)) %))
+             (update :dot #(if (> % 1) (dec %) %))
+             (update :count #(if (< % count-max) (+ % count-step) %)))))}))
 
 (defn- draw-state [{:keys [cursor x y]}]
   (q/background 255)
   (q/stroke 150)
+  (q/stroke-weight 1)
 
-  (let [{:keys [min max amt rotation]} cursor]
-    (if (expanded?)
-      (q/stroke-weight (q/lerp 1 2 amt))
-      (q/stroke-weight 1))
-
+  (let [{:keys [min max amt rotation dot count]} cursor]
     (q/with-translation
      [x y]
+
      (q/with-rotation [rotation 1 1 0]
-                      (let [count  (if (expanded?) 40 120)
-                            radius (q/lerp min max amt)]
+                      (let [radius (q/lerp min max amt)]
                         (doseq [i (range 0 q/TWO-PI (/ q/TWO-PI count))]
-                          (q/ellipse (* radius (q/cos i)) (* radius (q/sin i)) 1 1)))))))
+                          (q/fill 150)
+                          (q/ellipse (* radius (q/cos i)) (* radius (q/sin i)) dot dot)))))))
 
 (defn- mouse-moved [state event]
   (assoc state :mouse
