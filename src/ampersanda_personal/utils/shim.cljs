@@ -93,20 +93,39 @@
 
     (js/window.addEventListener "resize" on-resize)))
 
-(defn render-with-shim [content]
-  (reagent/create-class
-   {:component-did-mount
-    (fn [_]
-      ;; shim page scroll
-      (shim-scroll))
+(defn render-with-shim
+  ([content]
+   (reagent/create-class
+    {:component-did-mount
+     (fn [_]
+       ;; shim page scroll
+       (shim-scroll))
 
-    :component-will-unmount
-    (fn []
-      (reset-scroll))
+     :component-will-unmount
+     (fn []
+       (reset-scroll))
 
-    :reagent-render
-    (fn [_]
-      content)}))
+     :reagent-render
+     (fn [_]
+       content)}))
+
+  ([content component-did-mount component-will-unmount]
+   {:pre [(and (fn? component-did-mount)
+               (fn? component-will-unmount))]}
+   (reagent/create-class
+    {:component-did-mount
+     (fn [_]
+       (shim-scroll)
+       (component-did-mount _))
+
+     :component-will-unmount
+     (fn []
+       (reset-scroll)
+       (component-will-unmount))
+
+     :reagent-render
+     (fn [_]
+       content)})))
 
 ;(defn raf-fallback []
 ;  (let [i         (atom 0)

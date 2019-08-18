@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9868bed2-6029-4f82-8ce2-c11333639530" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ampersanda_personal/subs/window.cljs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ampersanda_personal/widget/wave.cljs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/core.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/core.cljs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/states.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/states.cljs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/css/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/main.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/utils/shim.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/utils/shim.cljs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,13 +24,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+            <state relative-caret-position="110">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>r</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,17 +68,18 @@
         <option value="$PROJECT_DIR$/deps.edn" />
         <option value="$PROJECT_DIR$/resources/public/css/style.less" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/routes.cljs" />
-        <option value="$PROJECT_DIR$/src/ampersanda_personal/utils/shim.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/blog.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/contact.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/widget/pointer-link.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/app_server.clj" />
-        <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs" />
-        <option value="$PROJECT_DIR$/resources/public/css/main.less" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/projects.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/states.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/core.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/subs/window.cljs" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/utils/shim.cljs" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs" />
+        <option value="$PROJECT_DIR$/resources/public/css/main.less" />
+        <option value="$PROJECT_DIR$/src/ampersanda_personal/widget/wave.cljs" />
         <option value="$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs" />
       </list>
     </option>
@@ -97,7 +105,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,6 +189,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,7 +242,8 @@
       <workItem from="1565886340215" duration="4633000" />
       <workItem from="1565891578407" duration="48659000" />
       <workItem from="1566053722699" duration="90000" />
-      <workItem from="1566143266011" duration="1917000" />
+      <workItem from="1566143266011" duration="3864000" />
+      <workItem from="1566148118108" duration="3113000" />
     </task>
     <task id="LOCAL-00001" summary="setup route">
       <created>1565895125222</created>
@@ -369,11 +378,25 @@
       <option name="project" value="LOCAL" />
       <updated>1566038156958</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="rotate cursor when hover link">
+      <created>1566145485167</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1566145485167</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor canvas state">
+      <created>1566148020666</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1566148020666</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55299000" />
+    <option name="totallyTimeSpent" value="60359000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -388,7 +411,7 @@
     <frame x="56" y="56" width="1793" height="938" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15448968" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15448968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -404,7 +427,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3716216" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3716216" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32995495" />
@@ -443,7 +466,9 @@
     <MESSAGE value="reset cursor translation when route" />
     <MESSAGE value="fix routes and create render with shim function" />
     <MESSAGE value="add lifestone project" />
-    <option name="LAST_COMMIT_MESSAGE" value="add lifestone project" />
+    <MESSAGE value="rotate cursor when hover link" />
+    <MESSAGE value="refactor canvas state" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor canvas state" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/state.cljs" />
@@ -653,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/utils/shim.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/blog.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -688,30 +706,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/images/lifestone.jpg" />
-    <entry file="file://$PROJECT_DIR$/resources/public/css/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/projects.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#250#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/states.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -729,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/widget/pointer-link.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/subs/cursor_state.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -750,10 +737,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/projects.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/widget/pointer-link.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/quil/quil/3.0.0/quil-3.0.0.jar!/quil/core.cljc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2865">
+          <caret line="4573" column="2" selection-start-line="4573" selection-start-column="2" selection-end-line="4573" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/utils/shim.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/css/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/pages/home.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/widget/wave.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ampersanda_personal/widget/cursor.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+        <state relative-caret-position="110">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -10,7 +10,7 @@
 (def speed 0.33)
 
 (defn- setup []
-  (q/frame-rate 30)
+  (q/frame-rate 60)
   (q/color-mode :hsb)
   {:x      0
    :y      0
@@ -76,6 +76,8 @@
           :y (:y event)}))
 
 (defn execute! [width height]
+  {:pre [(and (number? width)
+              (number? height))]}
   (q/defsketch cursor
     :host "cursor"
     :size [width height]
