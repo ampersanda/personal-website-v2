@@ -13,11 +13,12 @@
   (q/translate 0 (- length))
 
   (when (> length 4)
-    (do
-      (q/with-rotation [angle]
-                       (branch (* length 0.67) angle))
-      (q/with-rotation [(- angle)]
-                       (branch (* length 0.67) angle)))))
+    (q/with-rotation
+     [angle]
+     (branch (* length 0.67) angle))
+    (q/with-rotation
+     [(- angle)]
+     (branch (* length 0.67) angle))))
 
 (defn- setup []
   (q/frame-rate 2)
