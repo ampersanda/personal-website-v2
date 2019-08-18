@@ -22,8 +22,24 @@
 (defmethod panels :about-panel [] [:h1 {:class "jumbo"} "About"])
 (defmethod panels :default [] [:h1 {:class "jumbo"} "404"])
 
+(defn- listen-window-resize []
+  (swap! state/app-state assoc :window
+         {:width  js/window.innerWidth
+          :height js/window.innerHeight}))
+
 (defn main-panel []
-  (panels (:route @state/app-state)))
+  (reagent/create-class
+   {:component-did-mount
+    (fn [_]
+      (js/window.addEventListener "resize" listen-window-resize))
+
+    :component-will-unmount
+    (fn []
+      (js/window.removeEventListener "resize" listen-window-resize))
+
+    :reagent-render
+    (fn []
+      (panels (:route @state/app-state)))}))
 
 (defn mount [el]
   (reagent/render-component [main-panel] el))

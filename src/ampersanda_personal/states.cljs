@@ -10,5 +10,6 @@
 
 (defonce app-state
   (atom
-   {:text         "Halo semua!"
-    :cursor-state :normal}))
+   {:cursor-state :normal
+    :window       {:width  js/window.innerWidth
+                   :height js/window.innerHeight}}))
