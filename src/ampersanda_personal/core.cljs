@@ -45,6 +45,8 @@
 
 (defn mount-app-element []
   (routes/app-routes)
+  (when-let [nav (js/document.querySelector "nav")]
+    (reagent/render-component [nav/template] nav))
   (when-let [app (js/document.getElementById "app")]
     (reagent/render-component [main-panel] app))
   (when-let [footer (js/document.querySelector "footer")]

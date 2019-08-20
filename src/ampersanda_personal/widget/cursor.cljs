@@ -20,8 +20,8 @@
             :count    120
             :speed    speed
             :amt      0
-            :min      40
-            :max      64}})
+            :min      20
+            :max      56}})
 
 (defn- ease-in-out-cubic [speed]
   (if (< speed 0.5)

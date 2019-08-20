@@ -237,7 +237,8 @@ body {
   min-height: calc(100vh - 114px);
 }
 #app,
-footer {
+footer,
+nav {
   max-width: 1199px;
   margin: 0 auto;
 }
@@ -261,6 +262,15 @@ footer {
   color: #222;
   font-size: 32px;
   display: inline-block;
+}
+nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .wrapper ul {
+  display: flex;
+  list-style: none;
 }
 .pointer-link {
   position: sticky;
