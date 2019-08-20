@@ -32,7 +32,7 @@
   (let [x-acc (+ x (* (- (:x mouse) x) speed))
         y-acc (+ y (* (- (:y mouse) y) speed))]
     (.setProperty js/document.documentElement.style "--global-slant" (* -10 (/ x-acc js/window.innerWidth)))
-
+    (.setProperty js/document.documentElement.style "--global-wght" (+ 100 (* 800 (/ x-acc js/window.innerWidth))))
 
     {:x     x-acc
      :y     y-acc

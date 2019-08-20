@@ -19,7 +19,7 @@
        {:class "wrapper"}
        [:a
         (+pointer-event
-         {:href (routes/url-for :home) :id "logo" :class "pointer-link editor"})
+         {:href (routes/url-for :home) :id "logo" :class "pointer-link editor use-global-font-var"})
         [:span {:class "alias alias__1"} "M"]
         [:span {:class "alias"} "o"]
         [:span {:class "alias"} "c"]

@@ -13,7 +13,7 @@
     :div        nil
     :scroll-top 0
     :tweened    0
-    :win-height 0}))
+    :win-height 70}))
 
 (defn- resize-fallback []
   (if (nil? (.-createEvent js/document))
@@ -48,8 +48,13 @@
     (when (> (abs (- scroll-top tweened)) 0)
       (swap! scroll-attrs update :tweened #(+ % (* 0.4 (- scroll-top tweened))))
 
-      (set! (.. (js/document.getElementById "cursor") -style -transform)
-        (str "translateY(" tweened "px)"))
+      (when-let [cursor (js/document.getElementById "cursor")]
+        (set! (.. cursor -style -transform)
+          (str "translateY(" tweened "px)")))
+
+      (when-let [nav (js/document.getElementById "nav")]
+        (set! (.. nav -style -transform)
+          (str "translateY(" tweened "px)")))
 
       (set! (.. wrapper -style -transform)
         (str "translateY(" (* -1 tweened) "px)"))
@@ -73,8 +78,13 @@
            :tweened    0
            :win-height 0})
 
-  (set! (.. (js/document.getElementById "cursor") -style -transform)
-    (str "translateY(" 0 "px)"))
+  (when-let [cursor (js/document.getElementById "cursor")]
+    (set! (.. cursor -style -transform)
+      (str "translateY(0)")))
+
+  (when-let [nav (js/document.getElementById "nav")]
+    (set! (.. nav -style -transform)
+      (str "translateY(0)")))
 
   (when-let [scrollbar (js/document.getElementById "scrollbar")]
     (. (.-parentNode scrollbar) removeChild scrollbar))

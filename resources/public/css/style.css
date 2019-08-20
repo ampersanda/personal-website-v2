@@ -40,9 +40,6 @@ body {
 /**
  * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
  */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
 /* Grouping content
    ========================================================================== */
 /**
@@ -263,6 +260,10 @@ nav {
   font-size: 32px;
   display: inline-block;
 }
+nav {
+  z-index: 9999;
+  position: relative;
+}
 nav .wrapper {
   display: flex;
   justify-content: space-between;
@@ -271,6 +272,7 @@ nav .wrapper {
 nav .wrapper ul {
   display: flex;
   list-style: none;
+  margin: 0;
 }
 .pointer-link {
   position: sticky;
@@ -350,6 +352,12 @@ p {
 }
 .use-global-slant {
   font-variation-settings: 'slnt' var(--global-slant);
+}
+.use-global-weight {
+  font-variation-settings: 'wght' var(--global-wght);
+}
+.use-global-font-var {
+  font-variation-settings: 'wght' var(--global-wght), 'slnt' var(--global-slant);
 }
 footer {
   text-align: center;

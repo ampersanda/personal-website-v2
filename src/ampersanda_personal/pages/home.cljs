@@ -14,10 +14,10 @@
   (render-with-shim
    [:main
     {:class "content editor"}
-    [:h1 {:class "jumbo use-global-slant"} "Hello!"]
+    [:h1 {:class "jumbo"} "Hello!"]
     [:h1
      "My name is "
-     [:span {:style {:color "var(--blue)"}} "Mochamad Lucky Pradana"]
+     [:span "Mochamad Lucky Pradana"]
      ". I am Front End Developer and (ocassionally) Flutter Developer who live in "
      [:a
       (+pointer-event {:href "https://goo.gl/maps/sJumGDqZ8KVz16nG7"})
