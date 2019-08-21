@@ -275,7 +275,9 @@ nav .wrapper ul {
   margin: 0;
 }
 .pointer-link {
-  position: sticky;
+  border: none;
+  background: none;
+  appearance: none;
   color: #222;
   font-weight: 600;
   text-decoration: none;

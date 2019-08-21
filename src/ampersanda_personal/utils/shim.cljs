@@ -52,10 +52,6 @@
         (set! (.. cursor -style -transform)
           (str "translateY(" tweened "px)")))
 
-      (when-let [nav (js/document.getElementById "nav")]
-        (set! (.. nav -style -transform)
-          (str "translateY(" tweened "px)")))
-
       (set! (.. wrapper -style -transform)
         (str "translateY(" (* -1 tweened) "px)"))
       (update-div-height))))
@@ -80,10 +76,6 @@
 
   (when-let [cursor (js/document.getElementById "cursor")]
     (set! (.. cursor -style -transform)
-      (str "translateY(0)")))
-
-  (when-let [nav (js/document.getElementById "nav")]
-    (set! (.. nav -style -transform)
       (str "translateY(0)")))
 
   (when-let [scrollbar (js/document.getElementById "scrollbar")]

@@ -21,7 +21,7 @@
             :speed    speed
             :amt      0
             :min      20
-            :max      56}})
+            :max      48}})
 
 (defn- ease-in-out-cubic [speed]
   (if (< speed 0.5)
@@ -39,18 +39,18 @@
      :mouse mouse
 
      :cursor
-     (let [{:keys [amt speed]} cursor
-           count-min           48
-           count-max           120
-           count-step          8]
+     (let [{:keys [amt speed count]} cursor
+           count-min                 32
+           count-max                 count
+           count-step                8]
        (if (expanded?)
          (-> cursor
              (update :amt #(if (< amt 1) (+ % (ease-in-out-cubic speed)) %))
-             (update :rotation #(+ % (ease-in-out-cubic speed)))
+             (update :rotation #(+ % (ease-in-out-cubic 0.1)))
              (update :dot #(if (< % 4) (inc %) %))
              (update :count #(if (> % count-min) (- % count-step) %)))
          (-> cursor
-             (update :amt #(if (> amt 0) (- % (ease-in-out-cubic speed)) %))
+             (update :amt #(if (pos? amt) (- % (ease-in-out-cubic speed)) %))
              (update :dot #(if (> % 1) (dec %) %))
              (update :count #(if (< % count-max) (+ % count-step) %)))))}))
 

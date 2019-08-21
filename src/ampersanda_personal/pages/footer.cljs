@@ -31,8 +31,11 @@
       "Quil"]
      " +️"
      [:span {:style {:color :red}} "❤️"]]]
-   [:a
+   [:button
     (+pointer-event
-     {:href  (routes/url-for :contact)
+     {:on-click (fn [e]
+                 (.preventDefault e)
+                 (js/window.scrollTo 0 0))
       :class "pointer-link pointer-link__bottom-right"})
-    "Contact"]])
+    [:i {:class "icon ion-ios-arrow-up"}]
+    "  Back to top"]])
